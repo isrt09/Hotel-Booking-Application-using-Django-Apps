@@ -4,7 +4,7 @@ Django is a Python-based free and open-source web framework that follows the mod
 - Static &  Media Files Configurations
 
   Files / Images upload & Display are demonstrated in this way as given below:-
-  
+
  - For Model Class
  	- image = models.ImageField(upload_to='property/',null=True)
 
@@ -21,4 +21,15 @@ Django is a Python-based free and open-source web framework that follows the mod
 		]
 
 		MEDIA_URL = '/media/'
-		MEDIA_ROOT = os.path.join(BASE_DIR, "static")   
+		MEDIA_ROOT = os.path.join(BASE_DIR, "static")  
+ 
+ -  Foreign Key Relationship
+   - Variable Name = models.ForeignKey('Category', null=True, on_delete=models.SET_NULL)
+
+ - Get All data from Database
+    - Property.objects.all()
+
+ - Get single data from Database
+   - Property.objects.get(id=id)
+
+
